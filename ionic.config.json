@@ -1,0 +1,7 @@
+{
+  "name": "testionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
