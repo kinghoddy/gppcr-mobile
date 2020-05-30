@@ -1,0 +1,78 @@
+.modal {
+  height: 330px;
+  top: unset;
+  left: unset;
+  position: fixed;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  right: 12px;
+  width: 200px;
+  bottom: 25px;
+  overflow: hidden;
+  border-radius: 25px;
+  /* overflow: hidden; */
+}
+.spinner {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.spinner ion-spinner,
+.spinner ion-spinner svg {
+  width: 880px !important;
+  height: 100px !important;
+}
+
+.vc {
+  height: calc(100vh + 30px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/assets/tv.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100%;
+  transform: translateY(-30px);
+}
+.modal .vc {
+  height: 360px;
+}
+.vc-frame {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  border: 0 !important;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+}
+.show .vc-frame {
+  opacity: 1;
+  visibility: visible;
+}
+
+.statusbar {
+  position: absolute;
+  z-index: 500;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* opacity: 0; */
+}
+.show .statusbar {
+  opacity: 1;
+}
+.statusbar span {
+  width: 100%;
+  display: block;
+  height: 60px;
+  /* background: #25a; */
+}
+.modal .statusbar span {
+  height: 30px;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

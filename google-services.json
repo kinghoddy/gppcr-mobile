@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "918726801790",
+    "firebase_url": "https://gppcr-c437c.firebaseio.com",
+    "project_id": "gppcr-c437c",
+    "storage_bucket": "gppcr-c437c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918726801790:android:f5d55208c985c04f8f5b2f",
+        "android_client_info": {
+          "package_name": "com.kinghoddy.gppcr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918726801790-8bmmvrbepthunndbiu8nb2ckql4jiahn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdEyZjiGP4Yhbdt3ZpyC_VYPaW_bKuRao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918726801790-8bmmvrbepthunndbiu8nb2ckql4jiahn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,10 @@
+.inline * {
+  display: inline;
+  font-weight: bold;
+}
+.d-flex {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
