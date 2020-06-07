@@ -132,7 +132,7 @@ const Tv: React.FC = () => {
         <IonGrid>
           <IonRow className="ion-justify-content-between ion-align-items-center">
             <IonCol>
-              <IonText>GPPCR tv is currently transmitting</IonText>
+              <IonText color="dark" >GPPCR tv is now live</IonText>
             </IonCol>
             <IonCol>
               <IonButton

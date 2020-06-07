@@ -24,7 +24,7 @@ const VC: React.FC<{ isOpen: boolean; dismissed: () => void }> = (props) => {
     setPictureMode(false);
   };
   const slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400,
   };
   function doRefresh(event: CustomEvent<RefresherEventDetail>) {
@@ -39,7 +39,6 @@ const VC: React.FC<{ isOpen: boolean; dismissed: () => void }> = (props) => {
   return (
     <IonModal
       cssClass={pictureMode ? "modal" : ""}
-      mode="ios"
       isOpen={props.isOpen}
       onDidDismiss={dismissed}
     >
@@ -52,42 +51,45 @@ const VC: React.FC<{ isOpen: boolean; dismissed: () => void }> = (props) => {
             refreshingText="Refreshing..."
           ></IonRefresherContent>
         </IonRefresher> */}
-      <IonSlides options={slideOpts} pager={true}>
-        <IonSlide>
-          <div className={"vc  " + (showIframe && "show")}>
-            <div className="statusbar">
-              <span></span>
-              <div className="toolbar">
-                <IonButton
-                  onClick={() => setPictureMode(!pictureMode)}
-                  fill="clear"
-                >
-                  <IonIcon
-                    slot="icon-only"
-                    icon={!pictureMode ? caretDownOutline : caretUpOutline}
-                  />
-                </IonButton>
+      <IonContent>
+        <IonSlides options={slideOpts} pager={true}>
+          <IonSlide>
+            <div className={"vc  " + (showIframe && "show")}>
+              <div className="statusbar">
+                <span></span>
+                <div className="toolbar">
+                  <IonButton
+                    onClick={() => setPictureMode(!pictureMode)}
+                    fill="clear"
+                  >
+                    <IonIcon
+                      slot="icon-only"
+                      icon={!pictureMode ? caretDownOutline : caretUpOutline}
+                    />
+                  </IonButton>
+                </div>
               </div>
+              {!showIframe && (
+                <div className="spinner">
+                  <IonSpinner name="lines" />
+                </div>
+              )}
+
+              <iframe
+                onLoad={() => setShowIframe(true)}
+                allow="microphone; camera; autoplay"
+                id="vChat"
+                className={"vc-frame "}
+                src="https://skychat.daily.co/church"
+              ></iframe>
             </div>
-            {!showIframe && (
-              <div className="spinner">
-                <IonSpinner name="lines" />
-              </div>
-            )}
+          </IonSlide>
 
-            <iframe
-              onLoad={() => setShowIframe(true)}
-              allow="microphone; camera; autoplay"
-              id="vChat"
-              className={"vc-frame "}
-              src="https://skychat.daily.co/church"
-            ></iframe>
-          </div>
-        </IonSlide>
-
-        <IonSlide></IonSlide>
-      </IonSlides>
-      {/* </IonContent> */}
+          <IonSlide>
+            <h4>Comments </h4>
+          </IonSlide>
+        </IonSlides>
+      </IonContent>
     </IonModal>
   );
 };
